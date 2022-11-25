@@ -1,19 +1,19 @@
-global array
-array = [29, 10, 14, 37, 14, 20, 7, 16, 12]
+global Value
+Value = [29, 10, 14, 37, 14, 20, 7, 16, 12]
 
-def partition(array, low, high):
-    pivot = array[high]
+def partition(Value, low, high):
+    pivot = Value[high]
 
     i = low - 1
     for j in range(low, high):
-        if array[j] < pivot:
+        if Value[j] < pivot:
             i += 1
-            temp = array[i]
-            array[i] = array[j]
-            array[j] = temp
-    temp = array[i + 1]
-    array[i + 1] = array[high]
-    array[high] = temp
+            temp = Value[i]
+            Value[i] = Value[j]
+            Value[j] = temp
+    temp = Value[i + 1]
+    Value[i + 1] = Value[high]
+    Value[high] = temp
     return i + 1
 
 def quicksort(array, low, high):
@@ -23,9 +23,9 @@ def quicksort(array, low, high):
         quicksort(array, p + 1, high)
     return array
 
-def Quicksort(array):
-    return quicksort(array, 0, len(array) - 1)
+def Quicksort(Value):
+    return quicksort(Value, 0, len(Value) - 1)
 
-print("Array = ",array)
-Quicksort(array)
-print("Lomuto QuickSort Sorted Array = ",array)
+print("Value = ",Value)
+Quicksort(Value)
+print("Lomuto QuickSort Sorted Array = ",Value)
