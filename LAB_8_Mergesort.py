@@ -21,7 +21,6 @@ def Mergesort(Value):
                 j += 1
             k += 1
 
-        # Checking if any element was left
         while i < len(left):
             Value[k] = left[i]
             i += 1
